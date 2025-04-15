@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <title>个人博客</title>
+    <style>
+        body {
+            background: url('https://picsum.photos/1920/1080?random=1') no-repeat center center fixed;
+            background-size: cover;
+            color: #e0f7fa;
+            scroll-behavior: smooth; /* 添加平滑滚动效果 */
+        }
+
+        .sidebar {
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .main-content {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #29b6f6;
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex h-screen">
+        <!-- 左侧导航栏 -->
+        <div class="sidebar w-64 p-4">
+            <h1 class="text-2xl font-bold mb-4">导航</h1>
+            <nav>
+                <ul>
+                    <li class="mb-2">
+                        <a href="#home" class="nav-link block text-lg"><i class="fa-solid fa-house mr-2"></i>主页</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#articles" class="nav-link block text-lg"><i class="fa-solid fa-newspaper mr-2"></i>文章</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#projects" class="nav-link block text-lg"><i class="fa-solid fa-briefcase mr-2"></i>项目</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#about" class="nav-link block text-lg"><i class="fa-solid fa-user mr-2"></i>关于我</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#contact" class="nav-link block text-lg"><i class="fa-solid fa-envelope mr-2"></i>联系我</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 右侧主要内容 -->
+        <div class="main-content flex-1 p-8 overflow-y-auto">
+            <!-- 主页 -->
+            <section id="home" class="mb-16">
+                <h2 class="text-4xl font-bold mb-4">欢迎来到我的博客</h2>
+                <p class="text-lg leading-relaxed">这里是一个充满科幻魅力的个人博客，探索未知的世界，分享科技与幻想的碰撞。</p>
+            </section>
+            <!-- 文章 -->
+            <section id="articles" class="mb-16">
+                <h2 class="text-4xl font-bold mb-4">文章</h2>
+                <article class="mb-8">
+                    <h3 class="text-2xl font-bold mb-2">第一篇文章</h3>
+                    <p class="text-lg leading-relaxed">文章内容示例，探索宇宙的奥秘，科幻的魅力在每一个字里行间绽放。</p>
+                </article>
+                <article class="mb-8">
+                    <h3 class="text-2xl font-bold mb-2">第二篇文章</h3>
+                    <p class="text-lg leading-relaxed">更多关于未来科技的畅想，以及它们如何改变我们的生活。</p>
+                </article>
+            </section>
+            <!-- 项目 -->
+            <section id="projects" class="mb-16">
+                <h2 class="text-4xl font-bold mb-4">项目</h2>
+                <div class="flex flex-wrap -mx-4">
+                    <div class="w-full md:w-1/2 px-4 mb-8">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">项目一</h3>
+                            <p class="text-lg leading-relaxed">一个基于科幻概念的编程项目，模拟未来城市的运行。</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 px-4 mb-8">
+                        <div class="bg-gray-800 p-6 rounded-lg shadow-md">
+                            <h3 class="text-2xl font-bold mb-2">项目二</h3>
+                            <p class="text-lg leading-relaxed">探索虚拟现实与科幻故事的结合，打造沉浸式体验。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 关于我 -->
+            <section id="about" class="mb-16">
+                <h2 class="text-4xl font-bold mb-4">关于我</h2>
+                <p class="text-lg leading-relaxed">我是一个科幻爱好者，喜欢探索未知的世界，通过博客分享我的想法和见解。</p>
+            </section>
+            <!-- 联系我 -->
+            <section id="contact">
+                <h2 class="text-4xl font-bold mb-4">联系我</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="name" class="block text-lg font-bold mb-2">姓名</label>
+                        <input type="text" id="name" class="w-full p-2 border border-gray-400 rounded-md" placeholder="请输入你的姓名">
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-lg font-bold mb-2">邮箱</label>
+                        <input type="email" id="email" class="w-full p-2 border border-gray-400 rounded-md" placeholder="请输入你的邮箱">
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-lg font-bold mb-2">留言</label>
+                        <textarea id="message" rows="4" class="w-full p-2 border border-gray-400 rounded-md" placeholder="请输入你的留言"></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">发送</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
+    
